@@ -33,6 +33,10 @@ class UserBooksController < ApplicationController
   def edit
     @user_book = UserBook.find(params[:id])
   end
+  
+  def borrow
+    @user_book = UserBook.find(params[:id])
+  end
 
   def update
     @user_book = UserBook.find(params[:id])
