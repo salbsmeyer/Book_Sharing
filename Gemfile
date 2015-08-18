@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git"
 
-gem 'calendar_date_select', :git => 'git://github.com/paneq/calendar_date_select.git'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

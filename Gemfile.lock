@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/paneq/calendar_date_select.git
-  revision: 977048211b94599fe0f08eb37a481f3d69df48f6
-  specs:
-    calendar_date_select (1.16.2)
-
-GIT
   remote: http://github.com/rbetina/starter_generators.git
   revision: ce5054d2da99912b666a6daf120e5fe487163cbc
   specs:
@@ -154,7 +148,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  calendar_date_select!
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
