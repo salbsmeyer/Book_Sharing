@@ -7,9 +7,9 @@
 
       <dd>
         <ul class="list-group">
-        <% Friendship.where(:sender_id=> @user).each do |zebra| %>
+        <% Friendship.where({ :sender_id => :user_id }) do |user| %>
           <li class="list-group-item">
-            <%= zebra.username %>
+            <%= user.username %>
           </li>
         <% end %>
 
