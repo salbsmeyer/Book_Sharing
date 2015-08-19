@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   # DELETE
   get "/delete_user/:id", :controller => "users", :action => "destroy"
+
+  #Logout
+  get "/users/sign_out", :controller => "users", :action => "sign_out"
   #------------------------------
 
   # Routes for the User_book resource:

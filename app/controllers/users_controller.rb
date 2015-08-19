@@ -51,4 +51,10 @@ class UsersController < ApplicationController
 
     redirect_to "/users", :notice => "User deleted."
   end
+
+  def sign_out
+    redirect_to "/users/sign_out"
+
+  end
+
 end

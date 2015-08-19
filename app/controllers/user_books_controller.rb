@@ -64,4 +64,6 @@ class UserBooksController < ApplicationController
 
     redirect_to "/user_books", :notice => "User book deleted."
   end
+
+
 end
