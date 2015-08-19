@@ -25,7 +25,7 @@
           Title
         </label>
 
-        <td>"<%= @user_book.title %>"></td>
+        <td>"<%= @user_book.title %>"</td>
       </div>
 
       <!-- Label and input for genre -->
@@ -34,7 +34,7 @@
           Genre
         </label>
 
-        <input type="text" id="genre" name="genre" placeholder="Genre" class="form-control" value="<%= @user_book.genre %>">
+        <td><%= @user_book.genre %></td>
       </div>
 
       <!-- Label and input for author -->
@@ -43,7 +43,7 @@
           Author
         </label>
 
-        <input type="text" id="author" name="author" placeholder="Author" class="form-control" value="<%= @user_book.author %>">
+        <td><%= @user_book.author %></td>
       </div>
 
 
@@ -53,7 +53,7 @@
           Rating
         </label>
 
-        <input type="text" id="rating" name="rating" placeholder="Rating" class="form-control" value="<%= @user_book.rating %>">
+        <td><%= @user_book.rating %> out of 5</td>
       </div>
 
       <!-- Label and input for image -->
@@ -62,7 +62,7 @@
           Image
         </label>
 
-        <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control" value="<%= @user_book.image %>">
+        <image><%= @user_book.image %></image>
       </div>
 
             <!-- Label and input for notes -->
@@ -71,39 +71,28 @@
           Notes
         </label>
 
-        <textarea id="notes" name="notes" placeholder="Notes" class="form-control" rows="3"><%= @user_book.notes %></textarea>
+        <td><%= @user_book.notes %></td>
 
       </div>
       <!-- Label and input for user_id -->
       <div class="form-group">
         <label for="user_id" class="control-label">
-          User
+          Borrower
         </label>
 
-      <input type="user" name="user" placeholder="Username" class="form-control"><%= @user_book.user %>
+      <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :user_name, @user), :class => "form-control") %>
       </div>
 
       <!-- Label and input for available -->
       <div class="checkbox">
         <label for="available">
           <input type="checkbox" id="available" name="available" value="1" <%= "checked" if @user_book.available %>>
-          Available
+          Available (please un-check when borrowing)
         </label>
       </div>
-
-
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          Borrow
-        </label>
-
-      </div>
-
-
 
       <button class="btn btn-warning">
-        Update User Book
+        Borrow
       </button>
       or
       <a href="/user_books/<%= @user_book.id %>">Cancel</a>

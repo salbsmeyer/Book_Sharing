@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   # Routes for the User resource:
+
+
+  get "/", :controller => "users", :action => "login"
+
   # CREATE
   get "/users/new", :controller => "users", :action => "new"
   post "/create_user", :controller => "users", :action => "create"
@@ -33,7 +37,7 @@ Rails.application.routes.draw do
   get "/delete_user_book/:id", :controller => "user_books", :action => "destroy"
 
   # BORROW
-  get"/borrow_book", :controller => "user_books", :action => "borrow"
+  get"/borrow_book/:id", :controller => "user_books", :action => "borrow"
   post "/update_user_book/:id", :controller => "user_books", :action => "update"
   #------------------------------
 

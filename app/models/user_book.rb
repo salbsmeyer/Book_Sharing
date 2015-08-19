@@ -5,4 +5,8 @@ class UserBook < ActiveRecord::Base
     return User.find_by(:id => self.user_id)
   end
 
+  def borrow
+    return UserBook.find_by(:id => self.user_id)
+  end
+
 end
