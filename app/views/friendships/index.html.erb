@@ -14,7 +14,7 @@
         <th>Actions</th>
       </tr>
 
-      <% Friendship.where(:receiver_id => @friendships).each do |friendship| %>
+      <% Friendship.where(:receiver_id => @friendship).each do |friendship| %>
       <tr>
         <td><%= friendship.receiver_id %></td>
         <td><%= friendship.sender_id %></td>
