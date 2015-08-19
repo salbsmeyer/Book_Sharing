@@ -9,4 +9,8 @@ class UserBook < ActiveRecord::Base
     return UserBook.find_by(:id => self.user_id)
   end
 
+  def name
+    return User.find_by(:id => self.user_id)
+  end
+
 end
