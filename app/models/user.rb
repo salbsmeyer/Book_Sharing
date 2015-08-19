@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   def friendship
     return Friendship.find_by(:id => self.sender_id)
   end
+
 end
